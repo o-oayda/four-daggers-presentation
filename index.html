@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			const size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+# Executive Summary—
+# The Four Daggers</script></section><section  data-markdown><script type="text/template"># Where?</script></section><section  data-markdown><script type="text/template"><div class="reset-margin" style="position: absolute; left: 0px; top: 35px; height: 630px; min-height: 630px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/north-uberium-and-free-states.png" alt="" style="width: 450px"></img></p>
+
+</div>
+<div class="reset-margin" style="position: absolute; left: 480px; top: 35px; height: 630px; min-height: 630px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+### The Free States of Waywardia <!-- .element: class="fragment" -->
+X <!-- .element: class="fragment" -->
+### The Uberium <!-- .element: class="fragment" -->
+</div>
+<aside class="notes"><ul>
+<li>On the West coast, to the north lies the Free States—to the South, The Uberium.<!-- .slide: class="drop" --></li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">### The City of [Waterway](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Waterway), The Uberium
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/waterway.jpg" alt="" ></img></p>
+
+<aside class="notes"><ul>
+<li>Through varying pathways we find ourselves in Waterway.</li>
+<li>The fastest growing city in The Uberium—<ul>
+<li>outside its colossal, ancient sandstrone walls—vast residential districts.</li>
+<li>Inside: a city of marble clashed with cobblestone Northern styles.</li>
+</ul>
+</li>
+<li>The premier source of MAGIC ITEMS, strictly controlled between the government, guilds and the esoteric <a href="obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&amp;file=Council%20of%20the%20Records">Council of the Records</a>.</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">#### Gears turn an immense lift—going down
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/sandstone-keep-library.jpg" alt="" ></img></p>
+
+<aside class="notes"><ul>
+<li>At the city&#39;s centre: the towering, yellow-grey <a href="obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&amp;file=Sandstone%20Keep">Sandstone Keep</a>.<ul>
+<li>8 stories known to the general public, connected by a giant, gear-operated mechanical elevator.</li>
+<li>But lower?</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template"># What?</script></section><section  data-markdown><script type="text/template">## Prefect's Commission into the Daggers
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/round-table.jpg" alt="" ></img></p>
+
+- Decreed by *Imperator* **[Augusto Paradisi](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Augusto%20Paradisi)**.
+- *Investigative function* into the nature of the so-called '*Daggers*'.
+<aside class="notes"><ul>
+<li>Within the last few weeks, the Prefect&#39;s Commission was created—apparently not vetoed by enough within the <em>Concilium Prefectis.</em></li>
+<li>Object: put aside past greivances and share information more freely on the Daggers to mitigate the risk of further claimaints arising.</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">## Key Questions
+1. What are the *[Daggers](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Daggers)*? How many? Four? What is their power?
+1. Who are the claimaints?<!-- .element: class="fragment" data-fragment-index="1" -->
+1. What is to be done with them?<!-- .element: class="fragment" data-fragment-index="2" --></script></section><section  data-markdown><script type="text/template"># Who?</script></section><section  data-markdown><script type="text/template">## 19 Members
+- *Ambassadors* from [Waystead](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Waystead) (4).
+- *Party* from [Aunumbia](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Aunumbia) + [General Thoradin Ikeson](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=General%20Thoradin%20Ikeson) (4).
+- Senior officials of **The Uberium** (4).
+- *Curators* of the [Council of the Records](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Council%20of%20the%20Records) (7).</script></section><section  data-markdown><script type="text/template">## Key Players—The Uberium
+
+<div class="has-dark-background reset-margin" style="background-color: indianred; position: absolute; left: 0px; top: 105px; height: 490px; min-height: 490px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/legate-cassius2.png" alt="" ></img></p>
+
+
+**Legate Cassius** <!-- .element: class="fragment" -->
+*Chairman* <!-- .element: class="fragment" -->
+</div>
+
+<div class="has-dark-background reset-margin" style="background-color: indianred; position: absolute; left: 576px; top: 105px; height: 490px; min-height: 490px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/dr-chelob2.jpg" alt="" ></img></p>
+
+
+**Dr Chelob** <!-- .element: class="fragment" -->
+*Archaeologist* <!-- .element: class="fragment" -->
+</div>
+
+<aside class="notes"><ul>
+<li><em>Legate Cassius</em>—the strong-willed Legate of Legion III, increasingly convinced of the overbearing influence of the Daggers. Commission Chair.</li>
+<li><em>Dr Chelob</em>—the upright, self-proclaimed &#39;mercenary archaeologist&#39; of The Uberium. Leader of dangerous expeditions into long-lost places to recover artefacts of power. <!-- .slide: class="drop" --></li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">## Key Players—The Uberium
+<div class="has-dark-background reset-margin" style="background-color: indianred; position: absolute; left: 0px; top: 105px; height: 490px; min-height: 490px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/prefect-hamalcar.jpg" alt="" ></img></p>
+
+
+**Prefect Titus** <!-- .element: class="fragment" -->
+
+*Prefect of Celius*<!-- .element: class="fragment" -->
+</div>
+
+<div class="has-dark-background reset-margin" style="background-color: indianred; position: absolute; left: 576px; top: 105px; height: 490px; min-height: 490px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/prefect-titus.jpg" alt="" ></img></p>
+
+
+**Prefect Hamalcar** <!-- .element: class="fragment" -->
+
+*Prefect of Tarentum* <!-- .element: class="fragment" -->
+</div>
+<aside class="notes"><ul>
+<li>Two mysterious prefects in attendance. Form part of the 11 most powerful people of The Uberium.<!-- .slide: class="drop" --></li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">### Key Players—Council of the Records
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 0px; top: 210px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-fulvia-human.png" alt="" ></img></p>
+
+
+**Curator Fulvia** <!-- .element: class="fragment" -->
+*Spoke with Thamoir?* <!-- .element: class="fragment" -->
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 672px; top: 210px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/inquisitor-bellana.jpg" alt="" ></img></p>
+
+
+**Inquisitor Bellana** <!-- .element: class="fragment" -->
+
+*Inquiry into Thamoir* <!-- .element: class="fragment" -->
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 336px; top: 210px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-ernas.png" alt="" ></img></p>
+
+
+**Curator Ernas** <!-- .element: class="fragment" -->
+
+*Kidnapped by sea-creatures?* <!-- .element: class="fragment" -->
+</div>
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template"><div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 0px; top: 0px; height: 315px; min-height: 315px; width: 432px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-morley.png" alt="" style="width: 240px"></img></p>
+
+
+**Curator Morley** <!-- .element: class="fragment" -->
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 528px; top: 0px; height: 315px; min-height: 315px; width: 432px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-maxwell.png" alt="" style="width: 240px"></img></p>
+
+
+**Curator Maxwell** <!-- .element: class="fragment" -->
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 528px; top: 385px; height: 315px; min-height: 315px; width: 432px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-michelson.png" alt="" style="width: 240px"></img></p>
+
+
+**Curator Michelson** <!-- .element: class="fragment" -->
+
+</div>
+<div class="has-light-background reset-margin" style="background-color: goldenrod; position: absolute; left: 0px; top: 385px; height: 315px; min-height: 315px; width: 432px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-dusupio.png" alt="" style="width: 240px"></img></p>
+
+
+**Curator Dusupio** <!-- .element: class="fragment" -->
+</div>
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template"># What Happened?</script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/legate-cassius2.png" alt="" ></img></p>
+
+- Introduction to the Commission.
+- Overview of the [Dagger of Arnor](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Dagger%20of%20Arnor) and the [Crimson Intitiative](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Crimson%20Intitiative).</script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/inquisitor-bellana.jpg" alt="" ></img></p>
+
+- Mental state and culpability of [Thamoir](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Thamoir) + relationship to the [Dagger of Arnor](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Dagger%20of%20Arnor).</script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/dr-chelob2.jpg" alt="" ></img></p>
+
+- *Expedition* to find the [Dagger of Sundered Hearts](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Dagger%20of%20Sundered%20Hearts) (Dagger 2).</script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-ernas.png" alt="" ></img></p>
+
+- *Kidnapping* by hideous <mark>**piscine creatures**</mark>?
+- *History* and *lore* of the [Daggers](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Daggers)—4 theorised?
+> One of the unspeakable horrors of the primal eons of all creation.
+> 
+\- Curator Ernas, 1090 T.A.</script></section><section  data-markdown><script type="text/template"><div class="reset-margin" style="position: absolute; left: 0px; top: 105px; height: 490px; min-height: 490px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/curator-ernas.png" alt="" ></img></p>
+
+</div>
+<div class="reset-margin" style="position: absolute; left: 288px; top: 105px; height: 490px; min-height: 490px; width: 672px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+> If they are allowed to persist [the Daggers] in this world, then they will only serve to attract **the most dangerous forces**. They must be collected until we know their **true purpose.**
+
+\- Curator Ernas, 1090 T.A.
+</div>
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">An *explosion* is heard. [Thamoir](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Thamoir) is thrown back...</script></section><section  data-markdown><script type="text/template">Curator Fulvia reveals *true form*...
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/dao-fulvia.png" alt="" style="width: 400px" class="fragment"></img></p>
+</script></section><section  data-markdown><script type="text/template">[Curator Michelson](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Curators%20Michelson) throws a *blue gemstone* on the gound.
+
+A portal appears— <!-- .element: class="fragment" --></script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/aboleth.jpg" alt="" ></img></p>
+</script></section><section  data-markdown><script type="text/template"><div class="has-dark-background reset-margin" style="background-color: teal; position: absolute; left: 0px; top: 105px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/deep-scion.jpg" alt="" class="fragment"></img></p>
+
+</div>
+<div class="has-dark-background reset-margin" style="background-color: teal; position: absolute; left: 336px; top: 105px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/skum.png" alt="" class="fragment"></img></p>
+
+
+</div>
+<div class="has-dark-background reset-margin" style="background-color: teal; position: absolute; left: 672px; top: 105px; height: 490px; min-height: 490px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/chuul.jpg" alt="" class="fragment"></img></p>
+
+
+</div>
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template"><!-- .slide: data-background-image="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5aeefd37-c294-432d-8f51-ce6cd227793b/d7gqoyq-81fe0b26-216e-463a-92dd-ae669203a1c6.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVhZWVmZDM3LWMyOTQtNDMyZC04ZjUxLWNlNmNkMjI3NzkzYlwvZDdncW95cS04MWZlMGIyNi0yMTZlLTQ2M2EtOTJkZC1hZTY2OTIwM2ExYzYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zw33TeV50ny6iCLMwwEVyEzmAt4iFiEGoWVWQiPKJc0" -->
+
+# Smoke</script></section><section  data-markdown><script type="text/template"><p style="line-height: 0" class="reset-paragraph"><img src="Reference Artwork/battle-mat.png" alt="" style="width: 800px"></img></p>
+</script></section><section  data-markdown><script type="text/template">- In the melee, the [Dagger of Arnor](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Dagger%20of%20Arnor) is presumably taken by the djinni-form of [Curator Fulvia](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Curator%20Fulvia).</script></section><section  data-markdown><script type="text/template">- There are some close calls with [Xxiphu](obsidian://open?vault=The%20Four%20Daggers%20(Shared%20Campaign%20Space)&file=Xxiphu)...</script></section><section  data-markdown><script type="text/template">- The *adventurers* and **key players** are bruised, battered and shaken—but all miraculously **SURVIVE**.</script></section><section  data-markdown><script type="text/template"># That is where our tale restarts</script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealCustomControls,
+        ],
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":true,"transition":"slide","transitionSpeed":"normal"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
